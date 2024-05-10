@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+    <div class="signup-header">
+        <h2>Sign Up</h2>
+    </div>
+    
+    <form id="signUpForm" action="register.html">
+        <label>
+            Choose Account Type:
+            <select id="accountType" required>
+                <option value="">Select Account Type</option>
+                <option value="education">Education</option>
+                <option value="tvet">TVET</option>
+            </select>
+        </label><br /><br />
+
+        <div id="educationStreamContainer">
+            <label for="educationStream">Choose Education Stream:</label>
+            <select id="educationStream" name="educationStream">
+                <option value="">Select Education Stream</option>
+                <option value="dste">DSTE</option>
+                <option value="dpte">DPTE</option>
+            </select>
+        </div><br /><br />
+        
+        <div id="lessonContainer">
+            <label for="lesson">Choose Lesson:</label>
+            <select id="lesson" name="lesson">
+                <option value="">Select Lesson</option>
+                <option value="math">Math</option>
+                <option value="science">Science</option>
+                <option value="english">English</option>
+                <option value="history">History</option>
+                <option value="cdp">CDP</option>
+                <option value="music">Music</option>
+                <option value="ict">ICT</option>
+                <option value="swahili">Swahili</option>
+                <option value="geography">Geography</option>
+                <option value="pe">PE</option>
+                <option value="research">Research</option>
+                <option value="art">Art</option>
+            </select>
+        </div><br /><br />
+        
+        <input type="submit" value="Sign Up" />
+    </form>
+
+    <script>
+        // Add event listener to form submission
+        document.getElementById('signUpForm').addEventListener('submit', function(event) {
+            // Redirect to register.html
+            window.location.href = 'register.html';
+            // Prevent default form submission
+            event.preventDefault();
+        });
+    </script>
+</body>
+</html>
